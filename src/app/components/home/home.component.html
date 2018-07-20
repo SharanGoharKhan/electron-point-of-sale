@@ -9,22 +9,5 @@
         </ul>
       </nav>
     </header>
-  
-    <input type="text" placeholder="Channel Username" value="UCVyRiMvfUNMA1UPlDPzG5Ow" (keyup.enter)="channel($event.target.value)">
-  
-    <main>
-      <ng-container *ngFor="let channel of channelInfo.items">
-        <figure>
-          <img [src]="channel.snippet.thumbnails.default.url">
-          <figcaption>
-            {{ channel.snippet.title }}
-          </figcaption>
-        </figure>
-  
-        <div class="stats">
-          <strong>{{ channel.statistics.subscriberCount | number }}</strong>
-          <span>SUBSCRIBERS</span>
-        </div>
-      </ng-container>
-    </main>
   </div>
+

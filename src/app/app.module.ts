@@ -19,8 +19,9 @@ import { WebviewDirective } from './directives/webview.directive';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { DataService } from './data.service';
-
+//Material Imports
+import {MatButtonModule, MatCheckboxModule, MatSidenavModule, MatLabel, MatFormFieldModule, MatSelectModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,15 +38,22 @@ export function HttpLoaderFactory(http: HttpClient) {
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
+    // Material Imports
+    MatButtonModule,
+    MatCheckboxModule,
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatSelectModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: (HttpLoaderFactory),
         deps: [HttpClient]
       }
-    })
+    }),
+    BrowserAnimationsModule
   ],
-  providers: [ElectronService, DataService],
+  providers: [ElectronService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

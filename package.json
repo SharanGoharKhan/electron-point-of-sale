@@ -36,7 +36,11 @@
     "test": "npm run postinstall:web && ng test",
     "e2e": "npm run postinstall:web && ng e2e"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@angular/cdk": "^6.2.0",
+    "@angular/material": "^6.2.0",
+    "@angular/animations": "^6.0.0"
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.6.3",
     "@angular/cli": "6.0.5",
